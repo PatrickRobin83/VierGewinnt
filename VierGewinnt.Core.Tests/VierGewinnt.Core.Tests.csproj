@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColumnMock.cs" />
+    <Compile Include="ColumnTest.cs" />
     <Compile Include="LineDummy.cs" />
     <Compile Include="LineTest.cs" />
     <Compile Include="Playertests.cs" />

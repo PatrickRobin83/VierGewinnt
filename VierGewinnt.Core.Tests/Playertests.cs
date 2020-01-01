@@ -16,7 +16,6 @@ namespace VierGewinnt.Core.Tests
                 new GamePiece(new Color(128,0,0), "Foo")
             };
             var testTarget = new Player("Foo", gamepieces);
-            var column = new Column();
             var initialCount = gamepieces.Count;
 
             testTarget.PlayTurn(new ColumnMock());

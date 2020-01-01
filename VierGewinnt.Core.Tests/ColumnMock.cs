@@ -1,4 +1,6 @@
-﻿namespace VierGewinnt.Core.Tests
+﻿using System;
+
+namespace VierGewinnt.Core.Tests
 {
     public class ColumnMock : IColumn
     {
@@ -6,6 +8,14 @@
         public void DropGamePiece(GamePiece gamePiece)
         {
             _countPlayTurnCalls++;
+        }
+
+        public bool IsColumnFull
+        {
+            get
+            {
+                throw new NotSupportedException();
+            }
         }
 
         public bool IsDropGamePieceCalledOnce

@@ -6,6 +6,7 @@ namespace VierGewinnt.Core
     {
         public Diagonal(IReadOnlyList<Field> fields) : base(fields)
         {
+
         }
     }
 }
