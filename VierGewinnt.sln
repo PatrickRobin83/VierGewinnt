@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.Core", "VierGew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.Core.Tests", "VierGewinnt.Core.Tests\VierGewinnt.Core.Tests.csproj", "{5074886F-9EB9-4105-A11B-3C6104A86E8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.WpfClient", "VierGewinnt.WpfClient\VierGewinnt.WpfClient.csproj", "{B80712DC-B405-44E4-A551-680B5BA2F757}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5074886F-9EB9-4105-A11B-3C6104A86E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5074886F-9EB9-4105-A11B-3C6104A86E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5074886F-9EB9-4105-A11B-3C6104A86E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80712DC-B405-44E4-A551-680B5BA2F757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80712DC-B405-44E4-A551-680B5BA2F757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80712DC-B405-44E4-A551-680B5BA2F757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80712DC-B405-44E4-A551-680B5BA2F757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

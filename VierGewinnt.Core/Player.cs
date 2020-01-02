@@ -8,13 +8,15 @@ namespace VierGewinnt.Core
     {
         private readonly string _name;
         private readonly IList<GamePiece> _gamePieces;
+        private readonly Color _playerColor;
 
-        public Player(string name, IList<GamePiece> gamePieces)
+        public Player(string name, IList<GamePiece> gamePieces, Color playerColor)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException("Player Name");
             if (gamePieces == null) throw new ArgumentNullException("GamePieces");
-
+            if (playerColor == null) throw new ArgumentNullException(nameof(playerColor), "Name of the Player shall not null");
             _gamePieces = gamePieces;
+            _playerColor = playerColor; 
             _name = name;
 
 

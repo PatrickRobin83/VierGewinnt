@@ -16,10 +16,10 @@ namespace VierGewinnt.Core.Tests
             
             var fields = new List<Field>
             {
-                new Field{GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
-                new Field{GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
-                new Field{GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
-                new Field{GamePiece = new GamePiece(new Color(128,0,0), "Foo")}
+                new Field(0,0){GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
+                new Field(0,1){GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
+                new Field(0,2){GamePiece = new GamePiece(new Color(128,0,0), "Foo")},
+                new Field(0,3){GamePiece = new GamePiece(new Color(128,0,0), "Foo")}
 
             };
 
@@ -36,13 +36,13 @@ namespace VierGewinnt.Core.Tests
         {
             var fields = new List<Field>
             {
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(0, 128, 0), "Bar")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")}
+                new Field(0,0) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,1) {GamePiece = new GamePiece(new Color(0, 128, 0), "Bar")},
+                new Field(0,2) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,3) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,4) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,5) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,6) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")}
             };
 
 
@@ -58,13 +58,13 @@ namespace VierGewinnt.Core.Tests
         {
             var fields = new List<Field>
             {
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(0, 128, 0), "Bar")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
-                new Field (),
-                new Field ()
+                new Field(0,0) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,1) {GamePiece = new GamePiece(new Color(0, 128, 0), "Bar")},
+                new Field(0,2) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,3) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,4) {GamePiece = new GamePiece(new Color(128, 0, 0), "Foo")},
+                new Field(0,5) ,
+                new Field(0,6) 
             };
 
 

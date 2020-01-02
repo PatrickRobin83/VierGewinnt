@@ -16,7 +16,7 @@ namespace VierGewinnt.Core.Tests
             var fields = new List<Field>();
             for (int i = 0; i < 6; i++)
             {
-                fields.Add(new Field());
+                fields.Add(new Field(0,i));
             }
 
             var testTarget = new Column(fields);
@@ -44,7 +44,7 @@ namespace VierGewinnt.Core.Tests
             var fields = new List<Field>();
             for (int i = 0; i < 6; i++)
             {
-                fields.Add(new Field{GamePiece = gamePiece});
+                fields.Add(new Field(0,i){GamePiece = gamePiece});
             }
 
             var testTarget = new Column(fields);
@@ -60,7 +60,7 @@ namespace VierGewinnt.Core.Tests
             var gamePiece = new GamePiece(new Color(128, 0, 0), "Foo");
             for (int i = 0; i < 6; i++)
             {
-                fields.Add(new Field());
+                fields.Add(new Field(0,i));
             }
             fields[0].GamePiece = gamePiece;
             fields[1].GamePiece = gamePiece;
@@ -77,7 +77,7 @@ namespace VierGewinnt.Core.Tests
             var fields = new List<Field>();
             for (int i = 0; i < 6; i++)
             {
-                fields.Add(new Field { GamePiece = gamePiece });
+                fields.Add(new Field(0,i) { GamePiece = gamePiece });
             }
             var testTarget = new Column(fields);
 

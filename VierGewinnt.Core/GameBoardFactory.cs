@@ -8,8 +8,8 @@ namespace VierGewinnt.Core
     {
         public GameBoard Create(int rowCount, int columnCount)
         {
-            if (columnCount < 2) throw new ArgumentOutOfRangeException("columnCount", "The number of columns must not be less than 2");
-            if(rowCount < 2) throw new ArgumentOutOfRangeException("rowCount", "The number of rows must not be less than 2");
+            if (columnCount < 2) throw new ArgumentOutOfRangeException(nameof(columnCount), "The number of columns must not be less than 2");
+            if (rowCount < 2) throw new ArgumentOutOfRangeException(nameof(rowCount), "The number of rows must not be less than 2");
             
             var fields = new Field[columnCount][];
             for (var i = 0; i < columnCount; i++)
@@ -17,12 +17,11 @@ namespace VierGewinnt.Core
                 fields[i] = new Field[rowCount];
                 for (var j = 0; j < rowCount; j++)
                 {
-                    fields[i][j] = new Field();
+                    fields[i][j] = new Field(i,j);
                 }
-
             }
 
-            var column = new List<Column>();
+            var columns = new List<Column>();
             for (var i = 0; i < columnCount; i++)
             {
                 var columnFields = new List<Field>();
@@ -30,7 +29,7 @@ namespace VierGewinnt.Core
                 {
                     columnFields.Add(fields[i][j]);
                 }
-                column.Add(new Column(columnFields));
+                columns.Add(new Column(columnFields));
             }
 
             var rows = new List<Row>();
@@ -40,15 +39,15 @@ namespace VierGewinnt.Core
 
                 for (var i = 0; i < columnCount; i++)
                 {
-                    rowFields.Add(fields[j][i]);
+                    rowFields.Add(fields[i][j]);
                 }
 
                 rows.Add(new Row(rowFields));
             }
 
             var diagonals = new List<Diagonal>();
+            var diagonalDirection = DiagonalDirection.RightBottom;
             // diagonals upper left to bottom right
-
 
             for (var i = 0; i < columnCount; i++)
             {
@@ -65,7 +64,7 @@ namespace VierGewinnt.Core
 
                 if (diagonalFields.Count >= 4)
                 {
-                    diagonals.Add(new Diagonal(diagonalFields));
+                    diagonals.Add(new Diagonal(i,0,diagonalDirection,diagonalFields));
                 }
             }
 
@@ -84,11 +83,12 @@ namespace VierGewinnt.Core
                 }
                 if(diagonalFields.Count >=4)
                 {
-                    diagonals.Add(new Diagonal(diagonalFields));
+                    diagonals.Add(new Diagonal(0,j,diagonalDirection,diagonalFields));
                 }
             }
 
             // diagonals from upper right to bottom left
+            diagonalDirection = DiagonalDirection.LeftBottom;
 
             for (var i = 0; i < columnCount; i++)
             {
@@ -104,7 +104,7 @@ namespace VierGewinnt.Core
 
                 if (diagonalFields.Count >= 4)
                 {
-                    diagonals.Add(new Diagonal(diagonalFields));
+                    diagonals.Add(new Diagonal(i,0,diagonalDirection,diagonalFields));
                 }
             }
 
@@ -123,11 +123,12 @@ namespace VierGewinnt.Core
 
                 if (diagonalFields.Count >= 4)
                 {
-                    diagonals.Add(new Diagonal(diagonalFields));
+                    diagonals.Add(new Diagonal(columnCount-1,j,diagonalDirection,diagonalFields));
                 }
             }
 
-            return new GameBoard();
+
+            return new GameBoard(fields,rows,columns,diagonals);
         }
     }
 }
