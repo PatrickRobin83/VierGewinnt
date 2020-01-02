@@ -12,9 +12,9 @@ namespace VierGewinnt.Core
 
         public Player(string name, IList<GamePiece> gamePieces, Color playerColor)
         {
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException("Player Name");
-            if (gamePieces == null) throw new ArgumentNullException("GamePieces");
-            if (playerColor == null) throw new ArgumentNullException(nameof(playerColor), "Name of the Player shall not null");
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(nameof(name),"Whitespaces not allowed in Playername");
+            if (gamePieces == null) throw new ArgumentNullException(nameof(gamePieces),"GamePieces shall not null");
+            if (playerColor == null) throw new ArgumentNullException(nameof(playerColor), "Color of the Player shall not null");
             _gamePieces = gamePieces;
             _playerColor = playerColor; 
             _name = name;
@@ -22,15 +22,11 @@ namespace VierGewinnt.Core
 
         }
 
-        public string Name
-        {
-            get { return _name; }
-        }
+        public string Name => _name;
 
-        public IList<GamePiece> GamePieces
-        {
-            get { return _gamePieces; }
-        }
+        public IList<GamePiece> GamePieces => _gamePieces;
+
+        public Color PlayerColor => _playerColor;
 
         public void PlayTurn(IColumn column)
         {

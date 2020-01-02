@@ -11,7 +11,9 @@ namespace VierGewinnt.WpfClient
     public interface IPlayerViewModel
     {
         //Brush PlayerColor { get; }
-        Player player { get; }
+        Player Player { get; }
+        bool ItsPlayersTurn { get; }
+
 
     }
 }
