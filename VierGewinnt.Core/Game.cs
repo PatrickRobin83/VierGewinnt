@@ -8,7 +8,7 @@ namespace VierGewinnt.Core
 {
     public partial class Game
     {
-        private readonly Board _board;
+        private readonly GameBoard _gameBoard;
         private readonly IReadOnlyList<Player> _playerList;
 
         public void StartGame()
