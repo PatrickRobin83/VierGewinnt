@@ -18,8 +18,6 @@ namespace VierGewinnt.Core
             _gamePieces = gamePieces;
             _playerColor = playerColor; 
             _name = name;
-
-
         }
 
         public string Name => _name;

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VierGewinnt.Core;
+using Color = VierGewinnt.Core.Color;
 
 namespace VierGewinnt.WpfClient
 {
@@ -23,6 +25,8 @@ namespace VierGewinnt.WpfClient
         public MainWindow()
         {
             InitializeComponent();
+            
+            Player p1 = new Player("Foo",new List<GamePiece>(21),new Color(128,128,0));
         }
     }
 }

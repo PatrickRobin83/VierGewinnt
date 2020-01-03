@@ -6,11 +6,10 @@
              xmlns:sd="clr-namespace:VierGewinnt.WpfClient.SampleData"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-<!--d:DataContext="{d:DesignInstance Type=sd:PlayerViewModelSampleData}"-->
-             <d:UserControl.DataContext>
-                 <sd:PlayerViewModelSampleData/>
-             </d:UserControl.DataContext>
-    <Border BorderThickness="5" BorderBrush="Silver">
+    <d:UserControl.DataContext>
+        <sd:PlayerViewModelSampleData />
+    </d:UserControl.DataContext>
+    <Border BorderThickness="5" BorderBrush="{Binding, Converter=ItsPlayersTurnToBrushConverter}">
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -20,12 +19,12 @@
                        FontFamily="Segovia UI Light" 
                        FontSize="40"
                        HorizontalAlignment="Center"
-                       Foreground="DarkRed" />
-            <TextBlock Grid.Row="1" Text="21 Spielsteine"
+                       Foreground="{Binding Player.PlayerColor, Converter={StaticResource ColorConverter}}"/>
+            <TextBlock Grid.Row="1" Text="{Binding Path=Player.GamePieces.Count, StringFormat=\{0\} Spielsteine}"
                        HorizontalAlignment="Center"
                        FontSize="20"
                        Margin="0,2"
-                       Foreground="DarkRed"/>
+                       Foreground="{Binding Player.PlayerColor, Converter={StaticResource ColorConverter}}"/>
         </Grid>
     </Border>
 </UserControl>
