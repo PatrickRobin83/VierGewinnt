@@ -3,10 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VierGewinnt.WpfClient"
+        xmlns:sd="clr-namespace:VierGewinnt.WpfClient.SampleData"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1300" Width="525">
+    <d:Window.DataContext>
+        <sd:MainWindowViewModelSampleData/>
+    </d:Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="282*"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="135*"/>
+        </Grid.ColumnDefinitions>
+        <ContentControl Content="{Binding Path=PlayerViewModels[0]}"
+                        ContentTemplate="{StaticResource PlayerViewModelDataTemplate}"/>
+        <ContentControl Grid.Column="2" Content="{Binding Path=PlayerViewModels[1]}"
+                        ContentTemplate="{StaticResource PlayerViewModelDataTemplate}"/>
+
     </Grid>
 </Window>

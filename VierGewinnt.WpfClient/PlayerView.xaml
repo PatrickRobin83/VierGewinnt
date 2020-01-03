@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <d:UserControl.DataContext>
-        <sd:PlayerViewModelSampleData />
+        <sd:PlayerViewModelSampleData ItsPlayersTurn="True"/>
     </d:UserControl.DataContext>
-    <Border BorderThickness="5" BorderBrush="{Binding, Converter=ItsPlayersTurnToBrushConverter}">
+    <Border BorderThickness="5" BorderBrush="{Binding Path=ItsPlayersTurn, Converter={StaticResource ItsPlayersTurnToBrushConverter}}">
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

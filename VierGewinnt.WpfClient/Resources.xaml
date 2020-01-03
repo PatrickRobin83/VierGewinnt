@@ -3,5 +3,10 @@
                     xmlns:local="clr-namespace:VierGewinnt.WpfClient"
                     xmlns:l="clr-namespace:VierGewinnt.WpfClient">
     <l:ColorConverter x:Key="ColorConverter"/>
+    <l:ItsPlayersTurnToBrushConverter x:Key="ItsPlayersTurnToBrushConverter"/>
+    <DataTemplate x:Key="PlayerViewModelDataTemplate" DataType="{x:Type l:IPlayerViewModel}">
+        <l:PlayerView/>
+    </DataTemplate>
+
     
 </ResourceDictionary>

@@ -56,7 +56,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ColorConverter.cs" />
+    <Compile Include="IGameBoardViewModel.cs" />
+    <Compile Include="IMainWindowViewModel.cs" />
     <Compile Include="ItsPlayersTurnToBrushConverter.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="PlayerViewModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="SampleData\MainWindowViewModelSampleData.cs" />
     <Compile Include="SampleData\PlayerViewModelSampleData.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
