@@ -5,24 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sd="clr-namespace:VierGewinnt.WpfClient.SampleData"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1300" Width="525">
+        Title="Vier Gewinnt" Height="1000" Width="1920"
+        Window.WindowState="Maximized" Window.WindowStartupLocation="CenterScreen">
     <d:Window.DataContext>
         <sd:MainWindowViewModelSampleData/>
     </d:Window.DataContext>
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="282*"/>
             <RowDefinition Height="37*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="129*"/>
-            <ColumnDefinition Width="253*"/>
-            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="1420*"/>
+            <ColumnDefinition Width="250*"/>
         </Grid.ColumnDefinitions>
         <ContentControl Content="{Binding Path=PlayerViewModels[0]}"
                         ContentTemplate="{StaticResource PlayerViewModelDataTemplate}"/>
-        <ContentControl Grid.Column="2" Content="{Binding Path=PlayerViewModels[1]}"
+        <ContentControl Grid.Column="2" Grid.Row="0" Content="{Binding Path=PlayerViewModels[1]}"
                         ContentTemplate="{StaticResource PlayerViewModelDataTemplate}"/>
+
+        <TextBlock Text="{Binding WinnerName, StringFormat=\{0\} hat gewonnen!}"
+                   Grid.Row="1" Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontFamily="Segovia UI light"
+                   FontSize="40"/>
 
     </Grid>
 </Window>

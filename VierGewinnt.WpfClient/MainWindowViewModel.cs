@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient
 {
     public class MainWindowViewModel : IMainWindowViewModel
     {
         private readonly IReadOnlyList<IPlayerViewModel> _playerViewModels;
+        private string _winnerName;
 
         public MainWindowViewModel(IReadOnlyList<IPlayerViewModel> playerViewModels)
         {
@@ -18,6 +20,8 @@ namespace VierGewinnt.WpfClient
         {
             get { return _playerViewModels; }
         }
+
+        public string WinnerName => _winnerName;
 
         public IGameBoardViewModel GamerBoardViewModel
         {
