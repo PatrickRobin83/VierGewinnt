@@ -6,6 +6,7 @@ namespace VierGewinnt.WpfClient.SampleData
     public class MainWindowViewModelSampleData : IMainWindowViewModel
     {
         private readonly IReadOnlyList<IPlayerViewModel> _playerViewModels;
+        private readonly IGameBoardViewModel _gameBoardViewModel;
 
         public MainWindowViewModelSampleData()
         {
@@ -16,11 +17,12 @@ namespace VierGewinnt.WpfClient.SampleData
             };
 
             _playerViewModels = playerViewModels;
+            _gameBoardViewModel = new GameBoardViewModelSampleData();
         }
 
         public IGameBoardViewModel GamerBoardViewModel
         {
-            get { return null; }
+            get { return _gameBoardViewModel; }
         }
 
         public IReadOnlyList<IPlayerViewModel> PlayerViewModels

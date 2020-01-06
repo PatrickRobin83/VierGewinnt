@@ -56,14 +56,24 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ColorConverter.cs" />
+    <Compile Include="GameBoardView.xaml.cs">
+      <DependentUpon>GameBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IClickColumnsCommand.cs" />
     <Compile Include="IGameBoardViewModel.cs" />
     <Compile Include="IMainWindowViewModel.cs" />
     <Compile Include="ItsPlayersTurnToBrushConverter.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="PlayerViewModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="SampleData\ClickColumnCommandDummy.cs" />
+    <Compile Include="SampleData\GameBoardViewModelSampleData.cs" />
     <Compile Include="SampleData\MainWindowViewModelSampleData.cs" />
     <Compile Include="SampleData\PlayerViewModelSampleData.cs" />
+    <Page Include="GameBoardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

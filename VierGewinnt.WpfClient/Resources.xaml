@@ -6,7 +6,11 @@
     <l:ItsPlayersTurnToBrushConverter x:Key="ItsPlayersTurnToBrushConverter"/>
     <DataTemplate x:Key="PlayerViewModelDataTemplate" DataType="{x:Type l:IPlayerViewModel}">
         <l:PlayerView/>
+        </DataTemplate>
+    <DataTemplate x:Key="GameBoardViewModelSampleDataTemplate" DataType="{x:Type l:IGameBoardViewModel}">
+        <l:GameBoardView />
     </DataTemplate>
 
-    
+
+
 </ResourceDictionary>
