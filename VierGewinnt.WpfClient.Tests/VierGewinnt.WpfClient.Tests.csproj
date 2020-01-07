@@ -52,8 +52,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClickColumnCommandTests.cs" />
     <Compile Include="ColorConverterTests.cs" />
+    <Compile Include="GameBoardMock.cs" />
     <Compile Include="IsPlayerTurnToBrushConverterTests.cs" />
+    <Compile Include="MainWindowViewModelMock.cs" />
+    <Compile Include="MainWindowViewModelTests.cs" />
+    <Compile Include="PlayerMock.cs" />
+    <Compile Include="PlayerViewModelMock.cs" />
     <Compile Include="PlayerViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VierGewinnt.Core.Tests\VierGewinnt.Core.Tests.csproj">
+      <Project>{5074886F-9EB9-4105-A11B-3C6104A86E8E}</Project>
+      <Name>VierGewinnt.Core.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VierGewinnt.Core\VierGewinnt.Core.csproj">
       <Project>{84187fe9-3589-4197-a431-88dcab0503db}</Project>
       <Name>VierGewinnt.Core</Name>

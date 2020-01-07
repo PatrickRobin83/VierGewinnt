@@ -2,7 +2,7 @@
 
 namespace VierGewinnt.Core
 {
-    public class Field
+    public class Field : IField
     {
         private readonly int _x;
         private readonly int _y;

@@ -9,7 +9,7 @@ namespace VierGewinnt.WpfClient
 {
     public interface IGameBoardViewModel
     {
-        IReadOnlyList<Field> Fields { get; }
+        IReadOnlyList<IField> Fields { get; }
         IReadOnlyList<IClickColumnsCommand> ClickColumnsCommands { get; }
     }
 }

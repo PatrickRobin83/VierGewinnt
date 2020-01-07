@@ -65,6 +65,10 @@
       <Project>{84187fe9-3589-4197-a431-88dcab0503db}</Project>
       <Name>VierGewinnt.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VierGewinnt.WpfClient\VierGewinnt.WpfClient.csproj">
+      <Project>{B80712DC-B405-44E4-A551-680B5BA2F757}</Project>
+      <Name>VierGewinnt.WpfClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

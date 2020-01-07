@@ -6,36 +6,43 @@ namespace VierGewinnt.Core
 {
     public class GameBoardFactory
     {
+        private readonly IFieldFactory _fieldFactory;
+
+        public GameBoardFactory(IFieldFactory fieldFactory)
+        {
+            _fieldFactory = fieldFactory ?? throw new ArgumentNullException(nameof(fieldFactory));
+        }
+
         public GameBoard Create(int rowCount, int columnCount)
         {
             if (columnCount < 2) throw new ArgumentOutOfRangeException(nameof(columnCount), "The number of columns must not be less than 2");
             if (rowCount < 2) throw new ArgumentOutOfRangeException(nameof(rowCount), "The number of rows must not be less than 2");
             
-            var fields = new Field[columnCount][];
+            var fields = new IField[columnCount][];
             for (var i = 0; i < columnCount; i++)
             {
-                fields[i] = new Field[rowCount];
+                fields[i] = new IField[rowCount];
                 for (var j = 0; j < rowCount; j++)
                 {
-                    fields[i][j] = new Field(i,j);
+                    fields[i][j] = _fieldFactory.Create(i, j); //new Field(i,j);
                 }
             }
 
             var columns = new List<Column>();
             for (var i = 0; i < columnCount; i++)
             {
-                var columnFields = new List<Field>();
-                for (var j = 0; j < rowCount; j++)
+                var columnFields = new List<IField>();
+                for (var j = rowCount -1; j >= 0; j--)
                 {
                     columnFields.Add(fields[i][j]);
                 }
-                columns.Add(new Column(columnFields));
+                columns.Add(new Column(i,columnFields));
             }
 
             var rows = new List<Row>();
             for (var j = 0; j < rowCount; j++)
             {
-                var rowFields = new List<Field>();
+                var rowFields = new List<IField>();
 
                 for (var i = 0; i < columnCount; i++)
                 {
@@ -54,7 +61,7 @@ namespace VierGewinnt.Core
                 var columnIndex = i;
                 var rowIndex = 0;
 
-                var diagonalFields = new List<Field>();
+                var diagonalFields = new List<IField>();
                 while (columnIndex < columnCount && rowIndex < rowCount)
                 {
                     diagonalFields.Add(fields[columnIndex][rowIndex]);
@@ -73,7 +80,7 @@ namespace VierGewinnt.Core
                 var columnIndex = 0;
                 var rowIndex = j;
 
-                var diagonalFields = new List<Field>();
+                var diagonalFields = new List<IField>();
 
                 while (columnIndex < columnCount && rowIndex < rowCount)
                 {
@@ -94,7 +101,7 @@ namespace VierGewinnt.Core
             {
                 var columnIndex = i;
                 var rowIndex = 0;
-                var diagonalFields = new List<Field>();
+                var diagonalFields = new List<IField>();
                 while (columnIndex >=0 && rowIndex < rowCount)
                 {
                     diagonalFields.Add(fields[columnIndex][rowIndex]);
@@ -112,7 +119,7 @@ namespace VierGewinnt.Core
             {
                 var columnIndex = columnCount - 1;
                 var rowIndex = j;
-                var diagonalFields = new List<Field>();
+                var diagonalFields = new List<IField>();
 
                 while (columnIndex >= 0 && rowIndex < rowCount)
                 {

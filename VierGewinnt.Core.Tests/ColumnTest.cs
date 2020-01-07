@@ -19,7 +19,7 @@ namespace VierGewinnt.Core.Tests
                 fields.Add(new Field(0,i));
             }
 
-            var testTarget = new Column(fields);
+            var testTarget = new Column(1,fields);
             var gamePiece = new GamePiece(new Color(128,0,0),"Foo");
 
             testTarget.DropGamePiece(gamePiece);
@@ -47,7 +47,7 @@ namespace VierGewinnt.Core.Tests
                 fields.Add(new Field(0,i){GamePiece = gamePiece});
             }
 
-            var testTarget = new Column(fields);
+            var testTarget = new Column(0,fields);
             
 
             testTarget.DropGamePiece(gamePiece);
@@ -65,7 +65,7 @@ namespace VierGewinnt.Core.Tests
             fields[0].GamePiece = gamePiece;
             fields[1].GamePiece = gamePiece;
 
-            var testTarget = new Column(fields);
+            var testTarget = new Column(0,fields);
             
             Assert.IsFalse(testTarget.IsColumnFull);
         }
@@ -79,7 +79,7 @@ namespace VierGewinnt.Core.Tests
             {
                 fields.Add(new Field(0,i) { GamePiece = gamePiece });
             }
-            var testTarget = new Column(fields);
+            var testTarget = new Column(0,fields);
 
             Assert.IsTrue(testTarget.IsColumnFull);
         }

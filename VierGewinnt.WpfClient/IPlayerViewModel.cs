@@ -12,7 +12,7 @@ namespace VierGewinnt.WpfClient
     {
         //Brush PlayerColor { get; }
         Player Player { get; }
-        bool ItsPlayersTurn { get; }
+        bool ItsPlayersTurn { get; set; }
 
 
     }

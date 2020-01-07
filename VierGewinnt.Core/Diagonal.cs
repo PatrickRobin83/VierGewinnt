@@ -12,7 +12,7 @@ namespace VierGewinnt.Core
         public Diagonal(int startIndexX,
                         int startIndexY,
                         DiagonalDirection diagonalDirection,
-                        IReadOnlyList<Field> fields) : base(fields)
+                        IReadOnlyList<IField> fields) : base(fields)
         {
             if (startIndexX < 0) throw new ArgumentOutOfRangeException(nameof(startIndexX), "The StartColumnIndex X for the Diagonal was out of range. Must be non-negative");
             if (startIndexY < 0) throw new ArgumentOutOfRangeException(nameof(startIndexY), "The StartColumnIndex Z for the Diagonal was out of range. Must be non-negative");

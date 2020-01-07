@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using VierGewinnt.WpfClient;
 
 namespace VierGewinnt.Core.Tests
 {
@@ -14,7 +15,7 @@ namespace VierGewinnt.Core.Tests
         [TestInitialize]
         public void TestInitialize()
         {
-            _testTarget = new GameBoardFactory();
+            _testTarget = new GameBoardFactory(new FieldDecoratorFactory());
             _gameBoard = _testTarget.Create(6, 7);
 
         }

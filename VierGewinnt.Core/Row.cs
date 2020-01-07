@@ -4,9 +4,9 @@ namespace VierGewinnt.Core
 {
     public class Row : Line
     {
-        private readonly IReadOnlyList<Field> _fields;
+        private readonly IReadOnlyList<IField> _fields;
 
-        public Row(IReadOnlyList<Field> fields) : base(fields)
+        public Row(IReadOnlyList<IField> fields) : base(fields)
         {
 
         }

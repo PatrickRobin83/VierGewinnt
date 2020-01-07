@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient.SampleData
@@ -30,9 +31,19 @@ namespace VierGewinnt.WpfClient.SampleData
             get { return _playerViewModels; }
         }
 
-        public string WinnerName
-        {
-            get { return _playerViewModels[0].Player.Name; }
+        public string WinnerText { 
+            get { return "Player A hat gewonnen!"; } 
         }
+
+        public Color WinnerColor
+        {
+            get { return new Color(128,0,0); }
+        }
+        public void PlayTurn(IColumn column)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

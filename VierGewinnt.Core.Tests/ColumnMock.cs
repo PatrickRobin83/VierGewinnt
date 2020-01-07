@@ -5,6 +5,10 @@ namespace VierGewinnt.Core.Tests
     public class ColumnMock : IColumn
     {
         private int _countPlayTurnCalls;
+        private IColumn _columnImplementation;
+        private bool _isColumnFull;
+
+
         public void DropGamePiece(GamePiece gamePiece)
         {
             _countPlayTurnCalls++;
@@ -12,11 +16,11 @@ namespace VierGewinnt.Core.Tests
 
         public bool IsColumnFull
         {
-            get
-            {
-                throw new NotSupportedException();
-            }
+            get { return _isColumnFull; }
+            set => _isColumnFull = value;
         }
+
+        public int Index => _columnImplementation.Index;
 
         public bool IsDropGamePieceCalledOnce
         {

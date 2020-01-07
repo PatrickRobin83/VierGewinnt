@@ -55,10 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClickColumnCommand.cs" />
     <Compile Include="ColorConverter.cs" />
+    <Compile Include="FieldDecoratorFactory.cs" />
+    <Compile Include="FieldNotifyingDecorator.cs" />
     <Compile Include="GameBoardView.xaml.cs">
       <DependentUpon>GameBoardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameBoardViewModel.cs" />
     <Compile Include="IClickColumnsCommand.cs" />
     <Compile Include="IGameBoardViewModel.cs" />
     <Compile Include="IMainWindowViewModel.cs" />

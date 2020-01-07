@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace VierGewinnt.Core
 {
 
-    public partial class Player
+    public partial class Player : IPlayer
     {
         private readonly string _name;
         private readonly IList<GamePiece> _gamePieces;

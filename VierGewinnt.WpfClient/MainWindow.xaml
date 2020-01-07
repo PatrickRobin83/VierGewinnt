@@ -29,13 +29,14 @@
         <ContentControl Grid.Column="2" Grid.Row="0" Content="{Binding Path=PlayerViewModels[1]}"
                         ContentTemplate="{StaticResource PlayerViewModelDataTemplate}"/>
 
-        <TextBlock Text="{Binding WinnerName, StringFormat=\{0\} hat gewonnen!}"
+        <TextBlock Text="{Binding WinnerText}"
                    Grid.Row="1" Grid.Column="0"
                    Grid.ColumnSpan="3"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontFamily="Segovia UI light"
-                   FontSize="40"/>
+                   FontSize="40"
+                   Foreground="{Binding Path=WinnerColor, Converter={StaticResource ColorConverter}}"/>
 
     </Grid>
 </Window>

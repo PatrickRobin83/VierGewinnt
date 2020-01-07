@@ -12,7 +12,7 @@ namespace VierGewinnt.WpfClient
         {
             var color = value as Color;
             if (color == null)
-                throw new ArgumentException("value is not a color");
+                return new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
 
             return new SolidColorBrush(System.Windows.Media.Color.FromRgb(color.Red,color.Green,color.Blue));
         }

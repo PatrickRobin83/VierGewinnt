@@ -8,16 +8,16 @@ namespace VierGewinnt.Core
 {
     public abstract class Line
     {
-        private readonly IReadOnlyList<Field> _fields;
+        private readonly IReadOnlyList<IField> _fields;
 
-        protected Line(IReadOnlyList<Field> fields)
+        protected Line(IReadOnlyList<IField> fields)
         {
             if (fields == null) throw new ArgumentNullException("fields");
 
             _fields = fields;
         }
 
-        public IReadOnlyList<Field> Fields 
+        public IReadOnlyList<IField> Fields 
         {
             get { return _fields; }
         }

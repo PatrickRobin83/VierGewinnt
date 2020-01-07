@@ -6,11 +6,13 @@ namespace VierGewinnt.Core
 {
     public class Column : Line, IColumn
     {
-        private readonly IReadOnlyList<Field> _fields;
+        private readonly IReadOnlyList<IField> _fields;
+        private readonly int _index;
+        private bool _isColumnFull;
 
-        public Column(IReadOnlyList<Field> fields) : base(fields)
+        public Column(int index,IReadOnlyList<IField> fields) : base(fields)
         {
-
+            _index = index;
         }
 
         public void DropGamePiece(GamePiece gamePiece)
@@ -29,7 +31,10 @@ namespace VierGewinnt.Core
         public bool IsColumnFull
         {
             get { return Fields.All(field => field.GamePiece != null); }
+            set => _isColumnFull = value;
         }
+
+        public int Index => _index;
 
     }
 }

@@ -9,15 +9,15 @@ namespace VierGewinnt.WpfClient.SampleData
 {
     public class GameBoardViewModelSampleData : IGameBoardViewModel
     {
-        private readonly IReadOnlyList<Field> _fields;
+        private readonly IReadOnlyList<IField> _fields;
         private readonly IReadOnlyList<IClickColumnsCommand> _clickColumnsCommands;
 
         public GameBoardViewModelSampleData()
         {
-            var fields = new Field[7][];
+            var fields = new IField[7][];
             for (var i = 0; i < 7; i++)
             {
-                fields[i] = new Field[6];
+                fields[i] = new IField[6];
                 for (var j = 0; j < 6; j++)
                 {
                     fields[i][j] = new Field(i,j);
@@ -45,7 +45,7 @@ namespace VierGewinnt.WpfClient.SampleData
             }
             _clickColumnsCommands = clickColumnCommands;
         }
-        public IReadOnlyList<Field> Fields
+        public IReadOnlyList<IField> Fields
         {
             get { return _fields; }
         }

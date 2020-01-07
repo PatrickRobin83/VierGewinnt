@@ -51,6 +51,10 @@
     <Compile Include="GameBoardFactory.cs" />
     <Compile Include="GamePiece.cs" />
     <Compile Include="IColumn.cs" />
+    <Compile Include="IField.cs" />
+    <Compile Include="IFieldFactory.cs" />
+    <Compile Include="IGameBoard.cs" />
+    <Compile Include="IPlayer.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
