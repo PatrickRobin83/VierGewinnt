@@ -48,7 +48,6 @@ namespace VierGewinnt.Core
                 {
                     return currentPlayerName;
                 }
-               
             }
             return null;
         }

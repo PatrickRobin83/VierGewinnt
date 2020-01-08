@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+ * -----------------------------------------------------------------------------
+ *	 
+ *   Filename		:   ClickColumnCommand.cs
+ *   Date			:   2020-01-07 09:25
+ *   All rights reserved
+ * 
+ * -----------------------------------------------------------------------------
+ * @author     Patrick Robin <support@rietrob.de>
+ * @Version      1.0.0
+ */
+
+using System;
 using VierGewinnt.Core;
 using System.ComponentModel;
 namespace VierGewinnt.WpfClient
