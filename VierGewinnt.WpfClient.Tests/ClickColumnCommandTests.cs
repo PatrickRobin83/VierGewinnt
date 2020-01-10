@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VierGewinnt.Core.Tests;
+using VierGewinnt.WpfClient.Commands;
 
 namespace VierGewinnt.WpfClient.Tests
 {

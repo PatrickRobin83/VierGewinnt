@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.Core.Tests
 {
     public class ColumnMock : IColumn
     {
         private int _countPlayTurnCalls;
-        private IColumn _columnImplementation;
         private bool _isColumnFull;
 
 
@@ -20,7 +21,7 @@ namespace VierGewinnt.Core.Tests
             set => _isColumnFull = value;
         }
 
-        public int Index => _columnImplementation.Index;
+        public int Index => 5;
 
         public bool IsDropGamePieceCalledOnce
         {

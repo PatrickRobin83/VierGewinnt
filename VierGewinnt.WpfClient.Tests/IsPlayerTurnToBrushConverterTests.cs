@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Media;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using VierGewinnt.WpfClient.Converter;
 
 namespace VierGewinnt.WpfClient.Tests
 {

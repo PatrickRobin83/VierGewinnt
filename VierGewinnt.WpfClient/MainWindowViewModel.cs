@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient
 {

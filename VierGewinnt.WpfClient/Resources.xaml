@@ -1,13 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:VierGewinnt.WpfClient"
-                    xmlns:l="clr-namespace:VierGewinnt.WpfClient">
-    <l:ColorConverter x:Key="ColorConverter"/>
-    <l:ItsPlayersTurnToBrushConverter x:Key="ItsPlayersTurnToBrushConverter"/>
-    <DataTemplate x:Key="PlayerViewModelDataTemplate" DataType="{x:Type l:IPlayerViewModel}">
+                    xmlns:l="clr-namespace:VierGewinnt.WpfClient"
+                    xmlns:vmodel="clr-namespace:VierGewinnt.WpfClient.Interfaces"
+                    xmlns:con="clr-namespace:VierGewinnt.WpfClient.Converter">
+    <con:VierGewinntColorConverter x:Key="ColorConverter"/>
+    <con:ItsPlayersTurnToBrushConverter x:Key="ItsPlayersTurnToBrushConverter"/>
+    <DataTemplate x:Key="PlayerViewModelDataTemplate" DataType="{x:Type vmodel:IPlayerViewModel}">
         <l:PlayerView/>
         </DataTemplate>
-    <DataTemplate x:Key="GameBoardViewModelSampleDataTemplate" DataType="{x:Type l:IGameBoardViewModel}">
+    <DataTemplate x:Key="GameBoardViewModelSampleDataTemplate" DataType="{x:Type vmodel:IGameBoardViewModel}">
         <l:GameBoardView />
     </DataTemplate>
 

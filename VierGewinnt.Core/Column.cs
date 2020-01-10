@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.Core
 {
@@ -13,6 +14,7 @@ namespace VierGewinnt.Core
         public Column(int index,IReadOnlyList<IField> fields) : base(fields)
         {
             _index = index;
+            _fields = fields;
         }
 
         public void DropGamePiece(GamePiece gamePiece)

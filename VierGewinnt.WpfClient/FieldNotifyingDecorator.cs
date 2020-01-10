@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 using VierGewinnt.WpfClient.Annotations;
 
 namespace VierGewinnt.WpfClient

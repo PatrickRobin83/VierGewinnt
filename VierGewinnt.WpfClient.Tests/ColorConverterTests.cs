@@ -1,7 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Windows.Media;
+﻿using System.Windows.Media;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Color = VierGewinnt.Core.Color;
 using MSColor = System.Windows.Media.Color;
+using VierGewinnt.WpfClient.Converter;
 
 namespace VierGewinnt.WpfClient.Tests
 {
@@ -12,7 +13,7 @@ namespace VierGewinnt.WpfClient.Tests
         public void ColorConverterReturnsColorWithRgbColor()
         {
             var color = new Color(255,128,0);
-            var testTarget = new ColorConverter();
+            var testTarget = new VierGewinntColorConverter();
 
             var resultingBrush = (SolidColorBrush) testTarget.Convert(color, null, null, null);
             var expectedColor = MSColor.FromRgb(color.Red, color.Green, color.Blue);

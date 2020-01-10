@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace VierGewinnt.WpfClient
+namespace VierGewinnt.WpfClient.Converter
 {
     public class ItsPlayersTurnToBrushConverter : IValueConverter
     {

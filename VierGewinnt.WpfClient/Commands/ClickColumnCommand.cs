@@ -11,9 +11,12 @@
  */
 
 using System;
-using VierGewinnt.Core;
+using  VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 using System.ComponentModel;
-namespace VierGewinnt.WpfClient
+using VierGewinnt.WpfClient.Interfaces;
+
+namespace VierGewinnt.WpfClient.Commands
 {
     public class ClickColumnCommand : IClickColumnsCommand
     {

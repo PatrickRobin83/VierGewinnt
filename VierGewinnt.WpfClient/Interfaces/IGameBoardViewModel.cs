@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 
-namespace VierGewinnt.WpfClient
+namespace VierGewinnt.WpfClient.Interfaces
 {
     public interface IGameBoardViewModel
     {

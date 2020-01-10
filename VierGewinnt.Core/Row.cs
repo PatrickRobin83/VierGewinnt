@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.Core
 {
@@ -8,7 +9,7 @@ namespace VierGewinnt.Core
 
         public Row(IReadOnlyList<IField> fields) : base(fields)
         {
-
+            _fields = fields;
         }
     }
 }

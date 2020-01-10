@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using VierGewinnt.Core;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient.SampleData
 {

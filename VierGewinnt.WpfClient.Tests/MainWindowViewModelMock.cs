@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient.Tests
 {

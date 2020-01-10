@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient.SampleData
 {
@@ -42,8 +45,16 @@ namespace VierGewinnt.WpfClient.SampleData
         public void PlayTurn(IColumn column)
         {
             throw new System.NotImplementedException();
+            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

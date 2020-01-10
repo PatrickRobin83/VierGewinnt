@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 
-namespace VierGewinnt.WpfClient
+namespace VierGewinnt.WpfClient.Interfaces
 {
     public interface IMainWindowViewModel : INotifyPropertyChanged
     {

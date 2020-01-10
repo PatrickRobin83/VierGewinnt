@@ -4,9 +4,9 @@ using System.Windows.Data;
 using System.Windows.Media;
 using Color = VierGewinnt.Core.Color;
 
-namespace VierGewinnt.WpfClient
+namespace VierGewinnt.WpfClient.Converter
 {
-    public class ColorConverter : IValueConverter
+    public class VierGewinntColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

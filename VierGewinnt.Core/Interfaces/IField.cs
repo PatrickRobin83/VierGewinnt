@@ -1,4 +1,4 @@
-﻿namespace VierGewinnt.Core
+﻿namespace VierGewinnt.Core.Interfaces
 {
     public interface IField
     {

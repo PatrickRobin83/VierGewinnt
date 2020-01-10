@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VierGewinnt.Core.Tests;
+using VierGewinnt.WpfClient.Interfaces;
 using VierGewinnt.WpfClient.SampleData;
 
 namespace VierGewinnt.WpfClient.Tests

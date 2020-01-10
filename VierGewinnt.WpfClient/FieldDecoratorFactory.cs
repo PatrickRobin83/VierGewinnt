@@ -1,4 +1,5 @@
 ﻿using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.WpfClient
 {

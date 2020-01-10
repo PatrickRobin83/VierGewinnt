@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace VierGewinnt.WpfClient
+namespace VierGewinnt.WpfClient.Interfaces
 {
     public interface IClickColumnsCommand : ICommand
     {

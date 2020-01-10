@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.WpfClient.Tests
 {

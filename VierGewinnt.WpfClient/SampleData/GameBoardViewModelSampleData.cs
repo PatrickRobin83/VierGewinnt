@@ -4,6 +4,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
 using VierGewinnt.Core;
+using VierGewinnt.Core.Interfaces;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient.SampleData
 {

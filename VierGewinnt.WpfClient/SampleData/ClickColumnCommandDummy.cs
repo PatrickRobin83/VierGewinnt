@@ -1,4 +1,5 @@
 ﻿using System;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient.SampleData
 {
@@ -23,5 +24,10 @@ namespace VierGewinnt.WpfClient.SampleData
 
         public event EventHandler CanExecuteChanged;
         public int ColumnIndex => _columnIndex;
+
+        protected virtual void OnCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

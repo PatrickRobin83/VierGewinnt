@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
 using System.Linq;
 using System.Windows;
 using VierGewinnt.Core;
+using VierGewinnt.WpfClient.Commands;
+using VierGewinnt.WpfClient.Interfaces;
 
 namespace VierGewinnt.WpfClient
 {

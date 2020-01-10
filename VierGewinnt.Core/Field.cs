@@ -1,4 +1,5 @@
 ﻿using System;
+using VierGewinnt.Core.Interfaces;
 
 namespace VierGewinnt.Core
 {
